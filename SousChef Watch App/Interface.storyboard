@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7702" systemVersion="14E17e" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
+    </dependencies>
+    <scenes>
+        <!--Initial Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller spacing="20" id="AgC-eL-Hgc" customClass="InitialInterfaceController" customModule="SousChef_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" spacing="5" id="Z5c-Jp-fVE">
+                            <items>
+                                <imageView alignment="center" verticalAlignment="center" image="rw-circle" id="RM4-QJ-QEV"/>
+                                <label alignment="center" verticalAlignment="center" text="SousChef" id="hwn-46-F4N"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" spacing="15" id="BFa-dT-BsR">
+                            <items>
+                                <button alignment="center" id="iup-xD-jfo">
+                                    <group key="contentGroup" alignment="left" layout="vertical" id="mV8-8G-5cg">
+                                        <items>
+                                            <imageView alignment="center" image="bookmark-button" id="Llp-YM-0QU"/>
+                                            <label alignment="center" text="Recipes" id="qua-8d-F1n">
+                                                <fontDescription key="font" type="system" pointSize="11"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <segue destination="pZw-2C-923" kind="push" id="S3P-5C-zrc"/>
+                                    </connections>
+                                </button>
+                                <button alignment="center" id="dZw-RL-k8O">
+                                    <group key="contentGroup" alignment="left" layout="vertical" id="mVm-q2-RFP">
+                                        <items>
+                                            <imageView alignment="center" image="ingredients" id="VDA-QJ-66a"/>
+                                            <label alignment="center" text="Groceries" id="0T7-zb-5oV">
+                                                <fontDescription key="font" type="system" pointSize="11"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <segue destination="bod-C9-zQ1" kind="push" id="BJ4-Bl-BmM"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <edgeInsets key="margins" left="0.0" right="0.0" top="15" bottom="0.0"/>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="133" y="348"/>
+        </scene>
+        <!--Recipes-->
+        <scene sceneID="3dl-lh-EIY">
+            <objects>
+                <controller title="Recipes" id="pZw-2C-923" customClass="RecipesInterfaceController" customModule="SousChef_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="yEo-xh-sGw">
+                            <items>
+                                <tableRow identifier="RecipeRowType" id="AX9-7U-vgf" customClass="RecipeRowController" customModule="SousChef_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="6hX-9r-nek">
+                                        <items>
+                                            <label alignment="left" text="Label" id="LvC-r2-79D"/>
+                                        </items>
+                                        <connections>
+                                            <segue destination="f65-oS-flu" kind="push" id="QYW-Ku-DfB"/>
+                                        </connections>
+                                    </group>
+                                    <connections>
+                                        <outlet property="textLabel" destination="LvC-r2-79D" id="VcL-bM-Bgh"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="yEo-xh-sGw" id="TIl-oc-pkL"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="421" y="177"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="myH-MV-WcL">
+            <objects>
+                <controller id="f65-oS-flu"/>
+            </objects>
+            <point key="canvasLocation" x="618" y="181"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="cPr-rG-TdZ">
+            <objects>
+                <controller id="pU9-Nh-pfj"/>
+            </objects>
+            <point key="canvasLocation" x="863" y="330"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="Nv7-nt-YMK">
+            <objects>
+                <controller id="ahs-lc-9pV"/>
+            </objects>
+            <point key="canvasLocation" x="867" y="38"/>
+        </scene>
+        <!--Groceries-->
+        <scene sceneID="nIi-kL-2Y7">
+            <objects>
+                <controller title="Groceries" id="bod-C9-zQ1"/>
+            </objects>
+            <point key="canvasLocation" x="431" y="470"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="0.10588235294117647" green="0.60784313725490191" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
+</document>
